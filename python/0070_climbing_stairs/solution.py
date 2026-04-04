@@ -13,3 +13,16 @@ class Solution:
             return memo[i]
     
         return fn(n)
+    
+    # this is a bottom up approach
+    def climbStairs(self, n: int) -> int:
+        pass
+        
+        one, two = 1 , 1
+
+        for i in range(n-1):
+            temp = one
+            one = one + two
+            two = temp
+
+        return one   
